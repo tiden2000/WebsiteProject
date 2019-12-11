@@ -2,24 +2,71 @@
     width           : 100%;
     margin-left     : auto;
     margin-right    : auto;
+    border-bottom: 1px solid black;
+    background: white
 }
+
+body{
+    background: rgb(245, 245, 245);
+}
+
 nav{
     max-width: 100%;
 }
+
 nav ul{  /* display navigation bar at center */
-    text-align: center;
     font-size: 0.7cm;
-    margin: 0;
-    padding: 0;
+    margin-top: 0;
     overflow: hidden;
     list-style-type: none;
+    margin-left: -35px;
 }
+
 nav li{  /* display each section in list */
+    font-size: 130%;
     display: inline-block;
-}  /* this class display stuff at middle of the page */
-.center{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 0%;
+}
+
+#home{
+    padding-right: 70px;
+    padding-left: 0%;
+    font-size: 250%;
+}
+
+.center{  /* this class display stuff at middle of the page */
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+table{  /* styling for homepage table */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 50%;
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    text-align: center;
+    font-size: 150%;
+    border: 3px solid black;
+}
+
+tr{
+    text-align: center;
+    font-size: 150%;
+}
+
+tr:hover{
+    background-color: #bdbdbd;
+}
+
+td{
+    border: 3px solid black;
 }
