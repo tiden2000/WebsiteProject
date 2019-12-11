@@ -1,0 +1,25 @@
+.container{
+    width           : 100%;
+    margin-left     : auto;
+    margin-right    : auto;
+}
+nav{
+    max-width: 100%;
+}
+nav ul{  /* display navigation bar at center */
+    text-align: center;
+    font-size: 0.7cm;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+}
+nav li{  /* display each section in list */
+    display: inline-block;
+}  /* this class display stuff at middle of the page */
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
