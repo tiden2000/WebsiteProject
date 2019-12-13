@@ -5,3 +5,9 @@ Frontend (HTML, CSS) / Deploy on Heroku			-->			Take request (add data, view dat
 View: Buttons \
 Controllers: Takes button clicks --> Call relevant functions from models (Connect, Insert, Select,...) \
 Models: Create database function (Connect, Insert, Select,...)
+
+
+
+Presentation:
+Cloud configuration images \
+Source code \
