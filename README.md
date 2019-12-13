@@ -9,4 +9,4 @@ Presentation:
 Cloud configuration images \
 Source code
 
-![Dio](C:\Users\ASUS\Desktop\maxresdefault.jpg)
+![Dio](C:/Users/ASUS/Desktop/dio.jpg)
