@@ -8,5 +8,3 @@ Models: Create database function (Connect, Insert, Select,...)
 Presentation:
 Cloud configuration images \
 Source code
-
-![Dio](C:\\Users\ASUS\Desktop\dio.jpg)
