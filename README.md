@@ -2,6 +2,6 @@ Frontend (HTML, CSS) / Deploy on Heroku			-->			Take request (add data, view dat
 -->     Connect to Database (AWS RDS) / Deploy on Cloud     --> Backend display requested data through Frontend table.
 
 
-View: Buttons
-Controllers: Takes button clicks --> Call relevant functions from models (Connect, Insert, Select,...)
-Models: Create database function (Connect, Insert, Select,...)
+View: Buttons \
+Controllers: Takes button clicks --> Call relevant functions from models (Connect, Insert, Select,...) \
+Models: Create database function (Connect, Insert, Select,...) \
