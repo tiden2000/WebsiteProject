@@ -19,6 +19,9 @@
         <tr>
             <th>Shop</th>
         </tr>
+        <tr>
+            <td>Shop123</td>
+        </tr>
             <?php require 'database.php';
             while ($row = sqlsrv_fetch_array($query)) {
                 echo "<tr>";
