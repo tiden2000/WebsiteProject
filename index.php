@@ -22,7 +22,7 @@
         // The connection will be attempted using Windows Authentication.
         $connectionInfo = array( "Database"=>"ShopsDB");
         $conn = sqlsrv_connect( $serverName, $connectionInfo);
-        $query = sqlsrv_query("SELECT Shop FROM Shops");
+        $query = "SELECT Shop FROM Shops";
         
         if( $conn ) {
             echo "Connection established.<br />";
