@@ -16,6 +16,9 @@
             </nav>
         </div>
         <table>  <!-- table -->
+        <tr>
+            <td>Shop</td>
+        </tr>
             <?php require 'database.php';
             while ($row = sqlsrv_fetch_array($query)) {
                 echo "<tr>";
