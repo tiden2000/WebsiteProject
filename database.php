@@ -6,6 +6,7 @@ $serverName = "LAPTOP-7J3F2UBU\SQLEXPRESS"; //serverName\instanceName
 $connectionInfo = array( "Database"=>"ShopsDB");
 $conn = sqlsrv_connect( $serverName, $connectionInfo);
 $query = "SELECT Shop FROM [ShopsDB].[dbo].[Shops]";
+$res = sqlsrv_query($conn, $query);
 
 if( $conn ) {
      echo "Connection established.<br />";
