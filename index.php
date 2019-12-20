@@ -10,21 +10,21 @@
             <nav>
                 <ul>
                     <li id="webname">MyWebsite</li>
-                    <li>Home</li>
-                    <li>About</li>
+                    <li>Update</li>
+                    <li>Delete</li>
                 </ul>
             </nav>
         </div>
         <table>  <!-- table -->
+            <?php require 'database.php';
+            while ($row = sqlsrv_fetch_array($query)) {
+                echo "<tr>";
+                echo "<td>".$row[Shop]."</td>";
+                echo "</tr>";
+            }
+            ?>
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Age</th>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Alice</td>
-                <td>20</td>
+                Shop
             </tr>
         </table>
     </body>
