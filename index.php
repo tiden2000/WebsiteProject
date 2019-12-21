@@ -19,14 +19,11 @@
         <tr>
             <th>Shop</th>
         </tr>
-        <tr>
-            <td>Shop123</td>
-        </tr>
         <?php require 'database.php';
-        while( $row = sqlsrv_fetch_array($res, SQLSRV_FETCH_ASSOC) ) {
-            echo '<tr>';
-            echo '<td>'.$row['Shop'].'</td>';
-            echo '</tr>';
+        while ($row = mysql_fetch_array($query)) {
+            echo "<tr>";
+            echo "<td>" . $row['Shop'] . "</td>";
+            echo "</tr>";
         }
         ?>
         </table>

@@ -1,17 +1,24 @@
 <?php
-$serverName = "LAPTOP-7J3F2UBU\\SQLEXPRESS, 1433"; //serverName\instanceName
+$host="localhost";
+$port=3306;
+$user="root";
+$password="chienbot123";
+$dbname="shopsdb";
 
-// Since UID and PWD are not specified in the $connectionInfo array,
-// The connection will be attempted using Windows Authentication.
-$connectionInfo = array( "Database"=>"ShopsDB");
-$conn = sqlsrv_connect( $serverName, $connectionInfo);
-$query = "SELECT Shop FROM [ShopsDB].[dbo].[Shops]";
-$res = sqlsrv_query($conn, $query);
+$con = new mysqli($host, $user, $password, $dbname, $port)
+	or die ('Could not connect to the database server' . mysqli_connect_error());
 
-if( $conn ) {
-     echo "Connection established.<br />";
-}else{
-     echo "Connection could not be established.<br />";
-     die( print_r( sqlsrv_errors(), true));
-}
+
+$sql = "SELECT Shop FROM shops";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+     // output data of each row
+     while($row = $result->fetch_assoc()) {
+         echo "Shop: " . $row["Shop"]. "<br>";
+     }
+ } else {
+     echo "0 results";
+ }
+ $conn->close();
 ?>
