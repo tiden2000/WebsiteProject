@@ -11,8 +11,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-echo "Connected successfully";
-
 mysqli_select_db($conn, "shopsdb") or die(mysqli_error($conn));
 
 $sql = "SELECT shops FROM shopstb";

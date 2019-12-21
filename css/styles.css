@@ -46,22 +46,23 @@ nav li{  /* display each section in list */
 }
 
 table{  /* styling for homepage table */
+    float: left;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
-    width: 50%;
+    width: 30%;
     border: 3px solid black;
     border-collapse: collapse;
 }
 
 th{
-    text-align: center;
+    text-align: left;
     font-size: 150%;
     border: 3px solid black;
 }
 
 tr{
-    text-align: center;
+    text-align: left;
     font-size: 150%;
 }
 
