@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 
 echo "Connected successfully";
 
-mysqli_select_db($conn, "shopsdb") or die(mysqli_error($conn). mysqli_error($conn));
+mysqli_select_db($conn, "shopsdb") or die(mysqli_error($conn));
 
 $sql = "SELECT Shop FROM shops";
 
