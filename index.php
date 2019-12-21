@@ -20,7 +20,7 @@
             <th>Shop</th>
         </tr>
         <?php require 'database.php';
-        while ($row = mysql_fetch_array($query)) {
+        while ($row = mysqli_fetch_array($result)) {
             echo "<tr>";
             echo "<td>" . $row['Shop'] . "</td>";
             echo "</tr>";
