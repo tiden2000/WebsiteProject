@@ -22,7 +22,7 @@
         <?php require 'database.php';
         while ($row = mysqli_fetch_array($result)) {
             echo "<tr>";
-            echo "<td>" . $row['Shop'] . "</td>";
+            echo "<td>" . $row['shops'] . "</td>";
             echo "</tr>";
         }
         ?>
