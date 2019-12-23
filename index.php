@@ -47,7 +47,6 @@
         ?>
         </tr>
         </table>
-        
         <form method="post" id="input-form">
         <input type="text" id="shopName" name="shopName" value=""/>
         </form>

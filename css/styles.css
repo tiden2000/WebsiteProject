@@ -57,6 +57,12 @@ nav li{  /* display each section in list */
 
 #saletb{
     float: right;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 30%;
+    border: 3px solid black;
+    border-collapse: collapse;
 }
 
 th{
@@ -76,4 +82,8 @@ tr:hover{
 
 td{
     border: 3px solid black;
+}
+
+#input-form{
+    clear: both;
 }
