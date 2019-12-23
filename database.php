@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $sql)or die("Error". mysqli_error($conn));
 
 if(isset($_POST['shopName'])) {
     $q = $_POST['shopName'];
-    $sqlSale = "SELECT customer, sale FROM saletb WHERE shop='$q'";
+    $sqlSale = "SELECT saleId, customer, product, date, sale FROM saletb WHERE shop='$q'";
     $saleResult = mysqli_query($conn, $sqlSale)or die("Error". mysqli_error($conn));
 }
 ?>

@@ -30,8 +30,11 @@
 
         <table id="saletb">  <!-- table -->
         <tr>
+        <th>Sale Id</th>
         <th>Customer</th>
-        <th>Sale</th>
+        <th>Product</th>
+        <th>Date</th>
+        <th>sale</th>
         </tr>
         <?php require 'database.php';
         $exist = isset($_POST['shopName'], $saleResult);
