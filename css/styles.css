@@ -57,6 +57,7 @@ nav li{  /* display each section in list */
 
 #saletb{
     float: right;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
@@ -85,5 +86,6 @@ td{
 }
 
 #input-form{
+    margin-top: 25px;
     clear: both;
 }
