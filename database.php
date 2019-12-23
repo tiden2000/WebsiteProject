@@ -17,16 +17,9 @@ $sql = "SELECT shops FROM shopstb";
 
 $result = mysqli_query($conn, $sql)or die("Error". mysqli_error($conn));
 
-$q = $_POST['shopName'];
-
 if(isset($_POST['shopName'])) {
     $q = $_POST['shopName'];
     $sqlSale = "SELECT customer, sale FROM saletb WHERE shop='$q'";
     $saleResult = mysqli_query($conn, $sqlSale)or die("Error". mysqli_error($conn));
 }
-
-var_dump($q);
-
-echo "q is: " .$q;
-
 ?>

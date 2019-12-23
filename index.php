@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <meta charset="utf-8">
         <title>Home</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="jquery_functions.js"></script>
     </head>
     <body>
         <div style="overflow: auto;" class="container">
@@ -36,14 +34,22 @@
         <th>Sale</th>
         </tr>
         <?php require 'database.php';
-        while ($row = mysqli_fetch_array($saleResult)) {
-            echo "<tr id='data'>";
-            echo "<td>" . $row['customer'] . "</td>";
-            echo "<td>" . $row['sale'] . "</td>";
-            echo "</tr>";
+        $exist = isset($_POST['shopName'], $saleResult);
+        if ($exist == true) {
+            while ($row = mysqli_fetch_array($saleResult)) {
+                echo "<tr id='data'>";
+                echo "<td>" . $row['customer'] . "</td>";
+                echo "<td>" . $row['sale'] . "</td>";
+                echo "</tr>";
+            }
         }
+        
         ?>
         </tr>
         </table>
+        
+        <form method="post" id="input-form">
+        <input type="text" id="shopName" name="shopName" value=""/>
+        </form>
     </body>
 </html>
