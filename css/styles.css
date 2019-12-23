@@ -45,7 +45,7 @@ nav li{  /* display each section in list */
     width: 50%;
 }
 
-table{  /* styling for homepage table */
+#shopstb{  /* styling for homepage table */
     float: left;
     margin-left: auto;
     margin-right: auto;
@@ -53,6 +53,10 @@ table{  /* styling for homepage table */
     width: 30%;
     border: 3px solid black;
     border-collapse: collapse;
+}
+
+#saletb{
+    float: right;
 }
 
 th{
