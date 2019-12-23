@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var string = "Shop1";
+    var string = "ATN Ho Chi Minh";
     $("th").click(function(){
         $.post("database.php",
         {
