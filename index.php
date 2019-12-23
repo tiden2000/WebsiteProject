@@ -15,11 +15,11 @@
                 </ul>
             </nav>
         </div>
-        <table id="shopstb">  <!-- table -->
+        <table id="shopstb">  <!-- Shop table -->
         <tr>
             <th>Shop</th>
         </tr>
-        <?php require 'database.php';
+        <?php require 'database.php';  // Fetch shop data from database to html table
         while ($row = mysqli_fetch_array($result)) {
             echo "<tr id='shop-row'>";
             echo "<td>" . $row['shops'] . "</td>";
@@ -28,7 +28,7 @@
         ?>
         </table>
 
-        <table id="saletb">  <!-- table -->
+        <table id="saletb">  <!-- Sale table -->
         <tr>
         <th>Sale Id</th>
         <th>Customer</th>
@@ -39,7 +39,7 @@
         <?php require 'database.php';
         $exist = isset($_POST['shopName'], $saleResult);
         if ($exist == true) {
-            while ($row = mysqli_fetch_array($saleResult)) {
+            while ($row = mysqli_fetch_array($saleResult)) {  // Fetch sale data from database to html table
                 echo "<tr id='data'>";
                 echo "<td>" . $row['saleId'] . "</td>";
                 echo "<td>" . $row['customer'] . "</td>";
@@ -53,7 +53,7 @@
         ?>
         </tr>
         </table>
-        <form method="post" id="input-form">
+        <form method="post" id="input-form">  <!-- Take shop name as input -->
         <input type="text" id="shopName" name="shopName" value=""/>
         </form>
     </body>
