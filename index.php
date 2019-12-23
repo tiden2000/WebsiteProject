@@ -41,7 +41,10 @@
         if ($exist == true) {
             while ($row = mysqli_fetch_array($saleResult)) {
                 echo "<tr id='data'>";
+                echo "<td>" . $row['saleId'] . "</td>";
                 echo "<td>" . $row['customer'] . "</td>";
+                echo "<td>" . $row['product'] . "</td>";
+                echo "<td>" . $row['date'] . "</td>";
                 echo "<td>" . $row['sale'] . "</td>";
                 echo "</tr>";
             }
