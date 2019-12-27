@@ -22,13 +22,17 @@
         <?php require 'database.php';
         while ($row = mysqli_fetch_array($result)) {
             echo "<tr id='shop-row'>";
-            echo "<td>" . $row['shops'] . "</td>";
+            echo "<td>" . $row['saleId'] . "</td>";
+            echo "<td>" . $row['customer'] . "</td>";
+            echo "<td>" . $row['product'] . "</td>";
+            echo "<td>" . $row['date'] . "</td>";
+            echo "<td>" . $row['sale'] . "</td>";
             echo "</tr>";
         }
         ?>
         </table>
         
-        <script>
+        <script>  // Take data of row on click in shopstb
 
         highlight_row();
         function highlight_row() {
