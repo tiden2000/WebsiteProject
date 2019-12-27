@@ -22,11 +22,7 @@
         <?php require 'database.php';
         while ($row = mysqli_fetch_array($result)) {
             echo "<tr id='shop-row'>";
-            echo "<td>" . $row['saleId'] . "</td>";
-            echo "<td>" . $row['customer'] . "</td>";
-            echo "<td>" . $row['product'] . "</td>";
-            echo "<td>" . $row['date'] . "</td>";
-            echo "<td>" . $row['sale'] . "</td>";
+            echo "<td>" . $row['shops'] . "</td>";
             echo "</tr>";
         }
         ?>
@@ -69,7 +65,10 @@
         if ($exist == true) {
             while ($row = mysqli_fetch_array($saleResult)) {
                 echo "<tr id='data'>";
+                echo "<td>" . $row['saleId'] . "</td>";
                 echo "<td>" . $row['customer'] . "</td>";
+                echo "<td>" . $row['product'] . "</td>";
+                echo "<td>" . $row['date'] . "</td>";
                 echo "<td>" . $row['sale'] . "</td>";
                 echo "</tr>";
             }
