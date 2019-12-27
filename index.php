@@ -57,7 +57,10 @@
 
         <table id="saletb">  <!-- table -->
         <tr>
+        <th>Sale ID</th>
         <th>Customer</th>
+        <th>Product</th>
+        <th>Date</th>
         <th>Sale</th>
         </tr>
         <?php require 'database.php';
