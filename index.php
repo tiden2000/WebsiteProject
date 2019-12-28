@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href="css/styles.css?<?=filemtime("css/styles.css")?>" rel="stylesheet" type="text/css" />
+        <script src="scripts.js"></script>
         <meta charset="utf-8">
         <title>Home</title>
     </head>
@@ -9,15 +10,52 @@
         <div style="overflow: auto;" class="container">
             <nav>
                 <ul>
-                    <li id="webname">MyWebsite</li>
+                    <li id="webname">ATN Shops Central Database</li>
+                    <li onclick="document.getElementById('add-modal').style.display='block'">Add</li>
                     <li>Update</li>
                     <li>Delete</li>
                 </ul>
             </nav>
         </div>
-        <form name="input-form" id="input-form" method="post">
+
+        <form name="input-form" id="input-form" method="post">  <!-- Hidden form used to display data in tables -->
         <input type="hidden" id="shopName" name="shopName" value=""/>
         </form>
+        
+        <div id="add-modal" class="modal animate">  <!-- Popup form to add data -->
+
+            <span onclick="document.getElementById('add-modal').style.display='none'"
+            class="close" title="Close Modal">&times;</span>
+
+            <form name="add-form" id="add-form" method="post">
+
+                <div class="add-form-container">
+                    <label for="shopNameAdd"><b>Shop Name</b></label>
+                    <input type="text" name="shopNameAdd" required><br>
+
+                    <label for="saleIdAdd"><b>Sale ID</b></label>
+                    <input type="text" name="saleIdAdd" required><br>
+
+                    <label for="customerAdd"><b>Customer Name</b></label>
+                    <input type="text" name="customerAdd" required><br>
+
+                    <label for="productAdd"><b>Product Name</b></label>
+                    <input type="text" name="productAdd" required><br>
+
+                    <label for="dateAdd"><b>Sale Date</b></label>
+                    <input type="text" name="dateAdd" required><br>
+
+                    <label for="saleAdd"><b>Sale</b></label>
+                    <input type="text" name="saleAdd" required><br>
+
+                    <button type="submit">Add</button>
+                    <button type="button" onclick="document.getElementById('add-modal').style.display='none'" class="cancelButton">Cancel</button>
+                </div>
+
+            </form>
+
+        </div>
+
         <table id="shopstb">  <!-- table -->
         <tr>
             <th>Shop</th>
@@ -30,34 +68,8 @@
         }
         ?>
         </table>
-        
-        <script>  // Take data of row on click in shopstb
 
-        highlight_row();
-        function highlight_row() {
-            var table = document.getElementById('shopstb');
-            var cells = table.getElementsByTagName('td');
-            for (var i = 0; i < cells.length; i++) {
-                // Take each cell
-                var cell = cells[i];
-                cell.onclick = function () {
-                    // Get the row id where the cell exists
-                    var rowId = this.parentNode.rowIndex;
-                    
-                    var rowsNotSelected = table.getElementsByTagName('tr');
-                    for (var row = 0; row < rowsNotSelected.length; row++) {
-                        rowsNotSelected[row].style.backgroundColor = "";
-                        rowsNotSelected[row].classList.remove('selected');
-                        }
-                        var rowSelected = table.getElementsByTagName('tr')[rowId];
-                        rowSelected.style.backgroundColor = "#bdbdbd";
-                        rowSelected.className += " selected";
-                        document.getElementById("shopName").value = rowSelected.cells[0].innerHTML;
-                        document.forms["input-form"].submit();
-                }
-            }
-        }
-        </script>
+        <script src="scripts.js"></script>
 
         <table id="saletb">  <!-- table -->
         <tr>
