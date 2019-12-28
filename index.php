@@ -12,8 +12,8 @@
                 <ul>
                     <li id="webname">ATN Shops Central Database</li>
                     <li onclick="document.getElementById('add-modal').style.display='block'">Add</li>
-                    <li>Update</li>
-                    <li>Delete</li>
+                    <li onclick="document.getElementById('update-modal').style.display='block'">Update</li>
+                    <li onclick="document.getElementById('delete-modal').style.display='block'">Delete</li>
                 </ul>
             </nav>
         </div>
@@ -49,12 +49,73 @@
                     <input type="text" name="saleAdd" required><br>
 
                     <button type="submit">Add</button>
-                    <button type="button" onclick="document.getElementById('add-modal').style.display='none'" class="cancelButton">Cancel</button>
+                    <button type="button" onclick="document.getElementById('add-modal').style.display='none'" class="cancelButton">Cancel
+                    </button>
                 </div>
 
             </form>
 
         </div>
+
+        <div id="update-modal" class="modal animate">  <!-- Popup form to update data -->
+
+            <span onclick="document.getElementById('update-modal').style.display='none'"
+            class="close" title="Close Modal">&times;</span>
+
+            <form name="update-form" id="update-form" method="post">
+
+                <div class="update-form-container">
+                    <label for="shopNameUpdate"><b>Shop Name</b></label>
+                    <input type="text" name="shopNameUpdate" required><br>
+
+                    <label for="saleIdUpdate"><b>Sale ID</b></label>
+                    <input type="text" name="saleIdUpdate" required><br>
+
+                    <label for="customerUpdate"><b>Customer Name</b></label>
+                    <input type="text" name="customerUpdate" required><br>
+
+                    <label for="productUpdate"><b>Product Name</b></label>
+                    <input type="text" name="productUpdate" required><br>
+
+                    <label for="dateUpdate"><b>Sale Date</b></label>
+                    <input type="text" name="dateUpdate" required><br>
+
+                    <label for="saleUpdate"><b>Sale</b></label>
+                    <input type="text" name="saleUpdate" required><br>
+
+                    <button type="submit">Update</button>
+                    <button type="button" onclick="document.getElementById('update-modal').style.display='none'" class="cancelButton">Cancel
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div id="delete-modal" class="modal animate">  <!-- Popup form to delete data -->
+
+            <span onclick="document.getElementById('delete-modal').style.display='none'"
+            class="close" title="Close Modal">&times;</span>
+
+            <form name="delete-form" id="delete-form" method="post">
+
+                <div class="delete-form-container">
+                    <label for="shopNameDelete"><b>Shop Name</b></label>
+                    <input type="text" name="shopNameDelete" required><br>
+
+                    <label for="saleIdDelete"><b>Sale ID</b></label>
+                    <input type="text" name="saleIdDelete" required><br>
+
+                    <button type="submit">Delete</button>
+                    <button type="button" onclick="document.getElementById('delete-modal').style.display='none'" class="cancelButton">Cancel
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        
 
         <table id="shopstb">  <!-- table -->
         <tr>
