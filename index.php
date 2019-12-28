@@ -15,6 +15,9 @@
                 </ul>
             </nav>
         </div>
+        <form name="input-form" id="input-form" method="post">
+        <input type="hidden" id="shopName" name="shopName" value=""/>
+        </form>
         <table id="shopstb">  <!-- table -->
         <tr>
             <th>Shop</th>
@@ -50,6 +53,7 @@
                         rowSelected.style.backgroundColor = "#bdbdbd";
                         rowSelected.className += " selected";
                         document.getElementById("shopName").value = rowSelected.cells[0].innerHTML;
+                        document.forms["input-form"].submit();
                 }
             }
         }
@@ -80,9 +84,5 @@
         ?>
         </tr>
         </table>
-        <form id="input-form" method="post">
-        <input type="text" id="shopName" name="shopName" value=""/>
-        <input type="submit" value="Submit">
-        </form>
     </body>
 </html>
