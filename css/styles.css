@@ -82,6 +82,7 @@ tr:hover{
 }
 
 td{
+    font-size: 70%;
     border: 3px solid black;
 }
 
