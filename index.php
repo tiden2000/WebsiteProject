@@ -59,7 +59,7 @@
         }
         </script>
 
-        <table id="saletb" style="width:400px">  <!-- table -->
+        <table id="saletb">  <!-- table -->
         <tr>
         <th>Sale ID</th>
         <th>Customer</th>
