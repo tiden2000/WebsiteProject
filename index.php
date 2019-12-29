@@ -119,7 +119,7 @@
 
         <table id="shopstb">  <!-- table -->
         <tr>
-            <th>Shop</th>
+            <th style="width=120px;">Shop</th>
         </tr>
         <?php require 'database.php';
         while ($row = mysqli_fetch_array($result)) {
